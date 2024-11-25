@@ -29,6 +29,15 @@ class AppTheme {
           shape: StadiumBorder(),
           elevation: 5,
           foregroundColor: Colors.white,
+        ),
+        //ElevatedButtons
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: primary,
+            foregroundColor: Colors.white,
+            shape: StadiumBorder(),
+            elevation: 5,
+          )
         )
         
       );
