@@ -38,6 +38,21 @@ class AppTheme {
             shape: StadiumBorder(),
             elevation: 5,
           )
+        ),
+        //InputDecoration
+        inputDecorationTheme: InputDecorationTheme(
+            floatingLabelStyle: TextStyle( color: primary),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: primary),
+              borderRadius: BorderRadius.circular(10)
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: primary),
+              borderRadius: BorderRadius.circular(10)
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10)
+            )
         )
         
       );

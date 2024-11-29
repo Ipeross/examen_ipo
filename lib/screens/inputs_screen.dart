@@ -28,7 +28,7 @@ class InputsScreen extends StatelessWidget {
               },
               autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
-                hintText: 'Nombre y apellidos',
+                hintText: 'Nombre',
                 labelText: 'Nombre',
                 helperText: 'Solo letras',
                 //prefixIcon: Icon(Icons.verified_user_outlined),
