@@ -35,6 +35,8 @@ class InputsScreen extends StatelessWidget {
                 icon: Icons.verified_outlined,
                 suffixIcon: Icons.person_2_rounded,
                 obscureText: false,
+                formProperty: 'nombre',
+                formValues: formValues,
               ),
               SizedBox(height: 30),
                CustomTextFormField(
@@ -42,6 +44,8 @@ class InputsScreen extends StatelessWidget {
                 labelText: 'Apellidos del usuario',
                 icon: Icons.person_4_outlined,
                 obscureText: false,
+                formProperty: 'apellidos',
+                formValues: formValues,
               ),
               SizedBox(height: 30),
                CustomTextFormField(
@@ -50,6 +54,8 @@ class InputsScreen extends StatelessWidget {
                 icon: Icons.email_rounded,
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
+                formProperty: 'email',
+                formValues: formValues,
               ),
               SizedBox(height: 30),
                CustomTextFormField(
@@ -57,6 +63,8 @@ class InputsScreen extends StatelessWidget {
                 labelText: 'Contraseña del usuario',
                 icon: Icons.password_rounded,
                 obscureText: true,
+                formProperty: 'password',
+                formValues: formValues,
               ),
               SizedBox(height: 30),
               ElevatedButton(
