@@ -10,6 +10,9 @@ class InputsScreen extends StatelessWidget {
 
     final myFormKey = GlobalKey<FormState>();
 
+    //bool _checkEnabled = true;
+    final ValueNotifier<bool> _checkEnabled = ValueNotifier<bool>(true);
+
     final Map<String, String> formValues = {
       'nombre':  'Andres',
       'apellido': 'Iniesta',
@@ -66,6 +69,33 @@ class InputsScreen extends StatelessWidget {
                 formProperty: 'password',
                 formValues: formValues,
               ),
+              SizedBox(height: 30),
+              DropdownButtonFormField(
+                items: [
+                  DropdownMenuItem(child: Text('Usuario'), value: 'usuario'),
+                  DropdownMenuItem(child: Text('Editor'), value: 'editor'),
+                  DropdownMenuItem(child: Text('Programador'), value: 'programador'),
+                  DropdownMenuItem(child: Text('Administrador'), value: 'administrador'),
+                ], 
+                onChanged: ((value){
+                  print(value);
+                  formValues['role'] = value ?? 'usuario';
+                })
+              ),
+              SizedBox(height: 30),
+
+              ValueListenableBuilder<bool>(
+                valueListenable: _checkEnabled, 
+                builder: (context, value, _){
+                  return Checkbox(
+                    value: value, 
+                    onChanged: (newValue) {
+                      _checkEnabled.value = newValue ?? true;
+                    },
+                  );
+                }
+              ),
+
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {

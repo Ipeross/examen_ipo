@@ -46,7 +46,7 @@ class AppRoutes {
       route: 'inputs', 
       icon: Icons.input_rounded, 
       name: 'Forms: Inputs', 
-      screen: const InputsScreen()),
+      screen: InputsScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
