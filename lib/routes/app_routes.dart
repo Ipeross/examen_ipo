@@ -47,6 +47,11 @@ class AppRoutes {
       icon: Icons.input_rounded, 
       name: 'Forms: Inputs', 
       screen: InputsScreen()),
+    MenuOption(
+      route: 'slider', 
+      icon: Icons.arrow_back_ios_new, 
+      name: 'Slider', 
+      screen: SliderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){

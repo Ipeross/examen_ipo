@@ -53,6 +53,10 @@ class AppTheme {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10)
             )
+        ),
+        sliderTheme: SliderThemeData(
+          activeTrackColor: primary, 
+          thumbColor: primary
         )
         
       );
